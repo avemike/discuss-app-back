@@ -1,0 +1,43 @@
+{
+  "name": "message-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo 'haha no'",
+    "build": "rm -rf dist && webpack --mode development",
+    "start": "node ./dist/server.js"
+  
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/avemike/message-app.git"
+  },
+  "keywords": [
+    "gql",
+    "react",
+    "react-native",
+    "express",
+    "node",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/avemike/message-app/issues"
+  },
+  "homepage": "https://github.com/avemike/message-app#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^2.3.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
