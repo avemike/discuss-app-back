@@ -2,24 +2,24 @@ const { gql } = require('apollo-server')
 // const Chat = require('./sChat')
 
 const typeDefs = gql`
-  type User {
+  type Message {
     id: ID!
-    username: String!
-    email: String!
+    user: User
+    chat: Chat
+    content: String!
     createdAt: String!
-    chats: [Chat]!
+    updatedAt: String
   }
 
-  input UserInput {
+  input MessageInput {
     id: ID
-    username: String
-    email: String
+    content: String
     createdAt: String
+    updatedAt: String
   }
 
-  input CreateUserInput {
-    username: String!
-    email: String!
+  input CreateMessageInput {
+    content: String!
   }
 `
 

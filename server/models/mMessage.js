@@ -6,7 +6,7 @@ const MessageSchema = new Schema({
     type: Schema.Types.ObjectId,
     required: true
   },
-  room: {
+  chat: {
     type: Schema.Types.ObjectId,
     required: true
   },
