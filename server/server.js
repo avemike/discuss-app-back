@@ -3,7 +3,7 @@ const { ApolloServer } = require('apollo-server-express')
 const mongoose = require('mongoose')
 const path = require('path')
 const typeDefs = require('./schema/schema')
-const models = require('./models/models')
+const models = require('./models')
 const resolvers = require('./resolvers/resolver')
 
 

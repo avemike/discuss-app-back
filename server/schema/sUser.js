@@ -4,6 +4,8 @@ const typeDefs = gql`
   type User {
     id: ID!
     username: String!
+    email: String!
+    
   }
 
   input UserInput {
