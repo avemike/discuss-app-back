@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo 'haha no'",
     "build": "rm -rf dist && webpack --mode development",
-    "start": "node ./dist/server.js"
+    "start": "node ./dist/server.js",
+    "bs": "npm run build && npm run start",
+    "dev": "nodemon ./server/server.js"
   },
   "repository": {
     "type": "git",
@@ -14,6 +16,7 @@
   },
   "keywords": [
     "gql",
+    "apollo",
     "react",
     "react-native",
     "express",
@@ -37,8 +40,9 @@
     "webpack-node-externals": "^2.3.0"
   },
   "dependencies": {
+    "apollo-server": "^2.15.1",
+    "apollo-server-express": "^2.15.1",
     "express": "^4.17.1",
-    "express-graphql": "^0.11.0",
     "graphql": "^15.3.0",
     "mongoose": "^5.9.22"
   }
