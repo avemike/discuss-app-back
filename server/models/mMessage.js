@@ -4,11 +4,11 @@ const Schema = mongoose.Schema
 const MessageSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
-    required: true
+    // required: true
   },
   chat: {
     type: Schema.Types.ObjectId,
-    required: true
+    // required: true
   },
   content: {
     type: String,

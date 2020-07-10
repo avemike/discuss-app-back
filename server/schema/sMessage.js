@@ -1,5 +1,4 @@
 const { gql } = require('apollo-server')
-// const Chat = require('./sChat')
 
 const typeDefs = gql`
   type Message {
