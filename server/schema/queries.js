@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server')
+const { gql } = require("apollo-server");
 
 const typeDefs = gql`
   type Query {
@@ -7,10 +7,10 @@ const typeDefs = gql`
 
     chat(input: ChatInput): Chat
     chats(input: ChatInput): [Chat]!
-  
+
     message(input: MessageInput): Message
     messages(input: MessageInput): [Message]!
   }
-`
+`;
 
-module.exports = typeDefs
+module.exports = typeDefs;

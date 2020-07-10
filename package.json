@@ -8,7 +8,9 @@
     "build": "rm -rf dist && webpack --mode development",
     "start": "node ./dist/server.js",
     "bs": "npm run build && npm run start",
-    "dev": "nodemon ./server/server.js"
+    "dev": "nodemon ./server/server.js",
+    "format": "prettier \"server/**/*.js\" --write",
+    "lint": "eslint \"server/**/*.js\" --quiet"
   },
   "repository": {
     "type": "git",
@@ -33,8 +35,13 @@
     "@babel/core": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "babel-loader": "^8.1.0",
+    "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
+    "prettier": "^2.0.5",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "webpack-node-externals": "^2.3.0"

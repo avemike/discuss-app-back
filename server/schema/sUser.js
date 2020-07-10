@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server')
+const { gql } = require("apollo-server");
 // const Chat = require('./sChat')
 
 const typeDefs = gql`
@@ -21,6 +21,6 @@ const typeDefs = gql`
     username: String!
     email: String!
   }
-`
+`;
 
-module.exports = typeDefs
+module.exports = typeDefs;

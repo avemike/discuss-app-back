@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server')
+const { gql } = require("apollo-server");
 
 const typeDefs = gql`
   type Chat {
@@ -17,6 +17,6 @@ const typeDefs = gql`
   input CreateChatInput {
     name: String!
   }
-`
+`;
 
-module.exports = typeDefs
+module.exports = typeDefs;

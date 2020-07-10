@@ -1,19 +1,19 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
 const ChatSchema = new Schema({
   name: {
     type: String,
-    required: true
+    required: true,
   },
   users: {
     type: [Schema.Types.ObjectId],
-    required: true
+    required: true,
   },
   createdAt: {
     type: Date,
-    default: Date.now
-  }
-})
+    default: Date.now,
+  },
+});
 
-module.exports = ChatSchema
+module.exports = ChatSchema;
