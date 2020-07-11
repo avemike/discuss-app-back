@@ -5,6 +5,7 @@ const path = require("path");
 const typeDefs = require("./schema");
 const models = require("./models");
 const resolvers = require("./resolvers");
+
 const app = express(),
   DIST_DIR = process.cwd() + "/dist",
   HTML_FILE = path.join(`${DIST_DIR}`, "index.html");

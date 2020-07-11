@@ -5,6 +5,7 @@ const typeDefs = gql`
     createUser(input: CreateUserInput!): User!
 
     createChat(input: CreateChatInput!): Chat!
+    addUsersToChat(input: AddUsersToChatInput!): Chat!
 
     createMessage(input: CreateMessageInput!): Message!
   }

@@ -12,7 +12,7 @@ const UserSchema = new Schema({
     required: true,
     unique: true,
   },
-  Chats: {
+  chats: {
     type: [Schema.Types.ObjectId],
   },
   createdAt: {

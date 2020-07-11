@@ -9,8 +9,17 @@ module.exports = {
     },
   },
   Mutation: {
-    createUser(_, { input }, ctx) {
-      return new ctx.User(input).save();
+    async createUser(_, { input }, ctx) {
+      return await new ctx.User(input).save();
+    },
+  },
+  User: {
+    async chats(user, _, ctx) {
+      // const a = await ctx.Chat.find({ _id: { $in: user.chats } });
+      console.log(user);
+      return await ctx.Chat.find({ _id: { $in: user.chats } });
+
+      // return [];
     },
   },
 };

@@ -33,6 +33,7 @@
   "homepage": "https://github.com/avemike/message-app#readme",
   "devDependencies": {
     "@babel/core": "^7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "babel-loader": "^8.1.0",
     "eslint": "^7.4.0",

@@ -12,10 +12,17 @@ const typeDefs = gql`
     id: ID
     name: String
     createdAt: String
+    users: [ID]
   }
 
   input CreateChatInput {
     name: String!
+    users: [ID!]!
+  }
+
+  input AddUsersToChatInput {
+    chat: ID!
+    users: [ID]!
   }
 `;
 
