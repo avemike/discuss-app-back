@@ -18,6 +18,8 @@ const typeDefs = gql`
   }
 
   input CreateMessageInput {
+    user: ID!
+    chat: ID!
     content: String!
   }
 `;

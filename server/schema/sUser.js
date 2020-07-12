@@ -8,6 +8,7 @@ const typeDefs = gql`
     email: String!
     createdAt: String!
     chats: [Chat]!
+    messages: [Message]!
   }
 
   input UserInput {
@@ -15,6 +16,7 @@ const typeDefs = gql`
     username: String
     email: String
     createdAt: String
+    messages: [ID]
   }
 
   input CreateUserInput {

@@ -61,8 +61,11 @@ module.exports = {
     },
   },
   Chat: {
-    async users(chat, _, ctx) {
-      return await ctx.User.find({ _id: { $in: chat.users } });
+    async users(chat, { input }, ctx) {
+      return await ctx.User.find({ _id: { $in: chat.users }, ...input });
+    },
+    async messages(chat, { input }, ctx) {
+      return await ctx.Message.find({ _id: { $in: chat.messages }, ...input });
     },
   },
 };

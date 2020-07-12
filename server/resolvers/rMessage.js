@@ -9,8 +9,25 @@ module.exports = {
     },
   },
   Mutation: {
-    createMessage(_, { input }, ctx) {
-      return new ctx.Message(input).save();
+    async createMessage(_, { input }, ctx) {
+      const newMessage = await new ctx.Message(input).save();
+
+      // update chat
+      await ctx.Chat.findByIdAndUpdate(input.chat, {
+        $push: {
+          messages: newMessage._id,
+        },
+      });
+
+      return newMessage;
+    },
+  },
+  Message: {
+    async chat(message, _, ctx) {
+      return await ctx.Chat.findOne({ _id: message.chat }).exec();
+    },
+    async user(message, _, ctx) {
+      return await ctx.User.findOne({ _id: message.user }).exec();
     },
   },
 };

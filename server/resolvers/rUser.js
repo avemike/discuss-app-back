@@ -15,11 +15,11 @@ module.exports = {
   },
   User: {
     async chats(user, _, ctx) {
-      // const a = await ctx.Chat.find({ _id: { $in: user.chats } });
-      console.log(user);
       return await ctx.Chat.find({ _id: { $in: user.chats } });
+    },
 
-      // return [];
+    async messages(user, { input }, ctx) {
+      return await ctx.Message.find({ _id: { $in: user.messages }, ...input });
     },
   },
 };

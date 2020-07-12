@@ -5,16 +5,15 @@ const MessageSchema = new Schema(
   {
     user: {
       type: Schema.Types.ObjectId,
-      // required: true
+      required: true,
     },
     chat: {
       type: Schema.Types.ObjectId,
-      // required: true
+      required: true,
     },
     content: {
       type: String,
       required: true,
-      unique: true,
     },
     createdAt: {
       type: Date,
