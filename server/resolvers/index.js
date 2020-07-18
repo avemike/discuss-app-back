@@ -1,12 +1,7 @@
-const User = require("./rUser");
-const Chat = require("./rChat");
-const Message = require("./rMessage");
+const User = require("./User");
+const Chat = require("./Chat");
+const Message = require("./Message");
 
-const pullOutRestResolvers = (resolvers) => {
-  // eslint-disable-next-line no-unused-vars
-  const { Query, Mutation, ...Rest } = { ...resolvers };
-  return Rest;
-};
 module.exports = {
   Query: {
     ...User.Query,
@@ -18,7 +13,7 @@ module.exports = {
     ...Chat.Mutation,
     ...Message.Mutation,
   },
-  ...pullOutRestResolvers(User),
-  ...pullOutRestResolvers(Chat),
-  ...pullOutRestResolvers(Message),
+  User: User.User,
+  Chat: Chat.Chat,
+  Message: Message.Message,
 };

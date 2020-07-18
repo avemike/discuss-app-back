@@ -22,6 +22,15 @@ const typeDefs = gql`
     chat: ID!
     content: String!
   }
+
+  extend type Query {
+    message(input: MessageInput): Message
+    messages(input: MessageInput): [Message]!
+  }
+
+  extend type Mutation {
+    createMessage(input: CreateMessageInput!): Message!
+  }
 `;
 
 module.exports = typeDefs;

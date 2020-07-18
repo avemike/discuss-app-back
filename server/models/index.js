@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-const UserSchema = require("./mUser");
-const ChatSchema = require("./mChat");
-const MessageSchema = require("./mMessage");
+const UserSchema = require("./User");
+const ChatSchema = require("./Chat");
+const MessageSchema = require("./Message");
 
 module.exports = {
   User: mongoose.model("User", UserSchema),

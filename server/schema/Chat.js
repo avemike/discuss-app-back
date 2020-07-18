@@ -27,6 +27,16 @@ const typeDefs = gql`
     chat: ID!
     users: [ID]!
   }
+
+  extend type Query {
+    chat(input: ChatInput): Chat
+    chats(input: ChatInput): [Chat]!
+  }
+
+  extend type Mutation {
+    createChat(input: CreateChatInput!): Chat!
+    addUsersToChat(input: AddUsersToChatInput!): Chat!
+  }
 `;
 
 module.exports = typeDefs;

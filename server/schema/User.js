@@ -1,5 +1,4 @@
 const { gql } = require("apollo-server");
-// const Chat = require('./sChat')
 
 const typeDefs = gql`
   type User {
@@ -22,6 +21,15 @@ const typeDefs = gql`
   input CreateUserInput {
     username: String!
     email: String!
+  }
+
+  type Query {
+    user(input: UserInput): User
+    users(input: UserInput): [User]!
+  }
+
+  type Mutation {
+    createUser(input: CreateUserInput!): User!
   }
 `;
 
